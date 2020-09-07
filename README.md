@@ -228,7 +228,7 @@ const convertedAmount = humanReadableAmount.div(wei.pow(18));
 console.log(convertedAmount.toString());
 ```
 
-Note that you will not be judged to harshly on your number conversions, but accurate values will represent be appreciated.
+Note that **you will not be judged too harshly** on your number conversions, but accurate values will be appreciated.
 
 **Getting the date**
 
