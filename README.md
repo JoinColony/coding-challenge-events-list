@@ -76,7 +76,7 @@ Expected event values: [ColonyDataTypes.sol#L25-L26](https://github.com/JoinColo
 _Event logged when a user/domain/role is granted or revoked_
 
 Required display data and copy:
-- Primary:  **${role}** role assigned to **${userAddress}** in **${domainId}**.
+- Primary:  **${role}** role assigned to user **${userAddress}** in domain **${domainId}**.
 - Secondary: _Formatted event date_
 
 Expected event values: [ColonyDataTypes.sol#L40-L43](https://github.com/JoinColony/colonyNetwork/blob/develop/contracts/colony/ColonyDataTypes.sol#L40-L43)
@@ -86,7 +86,7 @@ Expected event values: [ColonyDataTypes.sol#L40-L43](https://github.com/JoinColo
 _Event logged when reward payout is claimed_
 
 Required display data and copy:
-- Primary:  **${userAddress}** collected Rewards from **${rewardPayoutId}**.
+- Primary:  User **${userAddress}** collected rewards from pot **${rewardPayoutId}**.
 - Secondary: _Formatted event date_
 
 Expected event values: [ColonyDataTypes.sol#L68-L71](https://github.com/JoinColony/colonyNetwork/blob/develop/contracts/colony/ColonyDataTypes.sol#L68-L71)
@@ -96,7 +96,7 @@ Expected event values: [ColonyDataTypes.sol#L68-L71](https://github.com/JoinColo
 _Event logged when a new Domain is added_
 
 Required display data and copy:
-- Primary:  **${domainId}** added.
+- Primary:  Domain **${domainId}** added.
 - Secondary: _Formatted event date_
 
 Expected event values: [ColonyDataTypes.sol#L181](https://github.com/JoinColony/colonyNetwork/blob/develop/contracts/colony/ColonyDataTypes.sol#L181)
