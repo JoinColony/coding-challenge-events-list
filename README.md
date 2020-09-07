@@ -76,7 +76,7 @@ Expected event values: [ColonyDataTypes.sol#L25-L26](https://github.com/JoinColo
 _Event logged when a user/domain/role is granted or revoked_
 
 Required display data and copy:
-- Primary:  **${role}** role assigned to **${user}** in **${domainId}**.
+- Primary:  **${role}** role assigned to **${userAddress}** in **${domainId}**.
 - Secondary: _Formatted event date_
 
 Expected event values: [ColonyDataTypes.sol#L40-L43](https://github.com/JoinColony/colonyNetwork/blob/develop/contracts/colony/ColonyDataTypes.sol#L40-L43)
