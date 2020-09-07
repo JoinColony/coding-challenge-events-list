@@ -10,13 +10,13 @@ The page you'll be creating just displays the list of formatted event data in a 
 
 We expect this task to be completed using [React](https://reactjs.org/), [CSS Modules](https://github.com/css-modules/css-modules) and [Typescript](https://www.typescriptlang.org/)
 
-For this, we suggest using [`create-react-app`](https://reactjs.org/docs/create-a-new-react-app.html), but we won't hold it against you if you preffer to set up the enviroment yourself, as long as it meets the above criteria.
+For this, we suggest using [`create-react-app`](https://reactjs.org/docs/create-a-new-react-app.html), but we won't hold it against you if you prefer to set up the enviroment yourself, as long as it meets the above criteria.
 
 The additional external libraries you'll need to complete this will be detailed in the appropriate section(s).
 
 ## Design
 
-The design specs provided are orientative, as we won't count the exact pixels, but do try to make them as close as possible _(going by both the below specs and the provided screenshot)_.
+The design specs provided are orientative, as we won't count the exact pixels, but do try to make them accurate to the designs _(going by both the below specs and the provided screenshot)_.
 
 **Page**
 - Background: grandient from `#f4f0f3` to `#eaf3f7`
@@ -51,7 +51,7 @@ The design specs provided are orientative, as we won't count the exact pixels, b
 
 The events and logs you'll be using come from the [Colony Network](https://github.com/JoinColony/colonyNetwork) smart contracts deployment on the Ethereum Mainnet.
 
-To make access easy to the above data, we've built an open-source library that interacts with the network contracts and which provides a more easy to use experience: [colonyJS](https://github.com/JoinColony/colonyJS).
+To make access easy to the above data, we've built an open-source library that interacts with the network contracts and provides an easier to use experience: [colonyJS](https://github.com/JoinColony/colonyJS).
 
 ### Events
 
