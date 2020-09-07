@@ -33,7 +33,7 @@ The design specs provided are orientative, as we won't count the exact pixels, b
 - Padding left, right: `20`px
 - Background: `white`
 - Border-radius: `6`px
-- Background Hover State: _should be existent, but it's up to you on what color / effect you choose to apply to it_
+- Background Hover State: _should be existent, but it's up to you what color / effect you choose to apply to it_
 
 **Avatar**
 - Width, Height: `37`px
@@ -48,7 +48,59 @@ The design specs provided are orientative, as we won't count the exact pixels, b
 
 ## Data
 
+The events and logs you'll be using come from the [Colony Network](https://github.com/JoinColony/colonyNetwork) smart contracts deployment on the Ethereum Mainnet.
 
+To make access easy to the above data, we've built an open-source library that interacts with the network contracts and which provides a more easy to use experience: [colonyJS](https://github.com/JoinColony/colonyJS).
+
+### Events
+
+From all the events available to us, you'll just be displaying the following four events:
+- [ColonyInitialised](https://github.com/JoinColony/colonyNetwork/blob/develop/contracts/colony/ColonyDataTypes.sol#L24-L27)
+- [ColonyRoleSet](https://github.com/JoinColony/colonyNetwork/blob/develop/contracts/colony/ColonyDataTypes.sol#L39-L44)
+- [PayoutClaimed](https://github.com/JoinColony/colonyNetwork/blob/develop/contracts/colony/ColonyDataTypes.sol#L39-L44)
+- [DomainAdded](https://github.com/JoinColony/colonyNetwork/blob/develop/contracts/colony/ColonyDataTypes.sol#L180-L182)
+
+**ColonyInitialised**
+
+_Event logged when Colony is initialised_
+
+Required display data and copy:
+- Primary:  Congratulations! It's a beautiful baby colony!
+- Secondary: _Formatted event date_
+
+Expected event values: [ColonyDataTypes.sol#L25-L26](https://github.com/JoinColony/colonyNetwork/blob/develop/contracts/colony/ColonyDataTypes.sol#L25-L26)
+
+**ColonyRoleSet**
+
+_Event logged when a user/domain/role is granted or revoked_
+
+Required display data and copy:
+- Primary:  **${role}** role assigned to **${user}** in **${domainId}**.
+- Secondary: _Formatted event date_
+
+Expected event values: [ColonyDataTypes.sol#L40-L43](https://github.com/JoinColony/colonyNetwork/blob/develop/contracts/colony/ColonyDataTypes.sol#L40-L43)
+
+**PayoutClaimed**
+
+_Event logged when reward payout is claimed_
+
+Required display data and copy:
+- Primary:  **${userAddress}** collected Rewards from **${rewardPayoutId}**.
+- Secondary: _Formatted event date_
+
+Expected event values: [ColonyDataTypes.sol#L68-L71](https://github.com/JoinColony/colonyNetwork/blob/develop/contracts/colony/ColonyDataTypes.sol#L68-L71)
+
+**DomainAdded**
+
+_Event logged when a new Domain is added_
+
+Required display data and copy:
+- Primary:  **${domainId}** added.
+- Secondary: _Formatted event date_
+
+Expected event values: [ColonyDataTypes.sol#L181](https://github.com/JoinColony/colonyNetwork/blob/develop/contracts/colony/ColonyDataTypes.sol#L181)
+
+### Fetching Events Data
 
 ## Submitting results
 
