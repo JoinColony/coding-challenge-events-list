@@ -1,6 +1,6 @@
 # Colony Coding Challenge
 
-Your task for this challenge is to build a simple events list display. I looks something like this:
+Your task for this challenge is to build a simple events list display. It looks something like this:
 
 ![Events List](./events-list-screenshot.png)
 
@@ -10,16 +10,16 @@ The page you'll be creating just displays the list of formatted event data in a 
 
 We expect this task to be completed using [React](https://reactjs.org/), [CSS Modules](https://github.com/css-modules/css-modules) and [Typescript](https://www.typescriptlang.org/)
 
-For this, we suggest using [`create-react-app`](https://reactjs.org/docs/create-a-new-react-app.html), but we won't hold it against you if you prefer to set up the enviroment yourself, as long as it meets the above criteria.
+For this, we suggest using [`create-react-app`](https://reactjs.org/docs/create-a-new-react-app.html), but we won't hold it against you if you prefer to set up the environment yourself, as long as it meets the above criteria.
 
 The additional external libraries you'll need to complete this will be detailed in the appropriate section(s).
 
 ## Design
 
-The design specs provided are orientative, as we won't count the exact pixels, but do try to make them accurate to the designs _(going by both the below specs and the provided screenshot)_.
+The design specs provided are orientative, as we won't count the exact pixels, but try to make it resemble the designs as much as possible _(going by both the below specs and the provided screenshot)_.
 
 **Page**
-- Background: grandient from `#f4f0f3` to `#eaf3f7`
+- Background: gradient from `#f4f0f3` to `#eaf3f7`
 - List should be centered horizontally
 
 **Events List**
@@ -126,7 +126,7 @@ import { InfuraProvider } from 'ethers/providers';
 
 // Set up the network address constants that you'll be using
 // The two below represent the current ones on mainnet
-// Don't worry to much about them, just use them as-is
+// Don't worry too much about them, just use them as-is
 const MAINNET_NETWORK_ADDRESS = `0x5346D0f80e2816FaD329F2c140c870ffc3c3E2Ef`;
 const MAINNET_BETACOLONY_ADDRESS = `0x869814034d96544f3C62DE2aC22448ed79Ac8e70`;
 
@@ -154,7 +154,7 @@ const colonyClient = await networkClient.getColonyClient(MAINNET_BETACOLONY_ADDR
 
 Now that you have the `colonyClient` instance, you can use it to filter out the logs of just the events that you need.
 
-Note that this example only covers this for one event type, as the process is the same for  of them.
+Note that this example covers only one event type _(in this case `PayoutClaimed`)_, as this process is the same for all.
 
 ```js
 import { getLogs } from '@colony/colony-js';
@@ -167,7 +167,7 @@ const eventFilter = colonyClient.filters.PayoutClaimed();
 const eventLogs = await getLogs(colonyClient, eventFilter);
 ```
 
-The above will get you the raw logs data, but to make sense of the data you need to parse them. To do this, you have to run each entry in the event logs array trough the `colonyClient.interface.parseLog()` parser method.
+The above will get you the raw logs data, but to make sense of the data you need to parse them. To do this, you have to run each entry in the event logs array through the `colonyClient.interface.parseLog()` parser method.
 
 Something like this:
 ```js
@@ -214,7 +214,7 @@ console.log(humanReadableAmount.toString());
 console.log(humanReadableAmount.toNumber());
 ```
 
-Note that most values you'll get back in logs are more then `53`bits in size so if you will try to convert them to an `integer` _(ie: use `.toNumber()`)_ it will throw an error.
+Note that most values you'll get back in logs are more than `53`bits in size so if you will try to convert them to an `integer` _(eg: use `.toNumber()`)_ it will throw an error.
 
 You can safely assume the payout amounts for all tokens have `18` decimal places, meaning that amount values will have to be divided by `10` to the power of `18` _(`10**18` or `1` followed by `18` zeros)_
 
@@ -227,7 +227,7 @@ const wei = new utils.BigNumber(10);
 // The converted amount is the human readable amount divided by the wei value raised to the power of 18
 const convertedAmount = humanReadableAmount.div(wei.pow(18));
 
-// If you are confident that it's a a low enough value, you can display it as an integer -- .toNumber()
+// If you are confident that it's a low enough value, you can display it as an integer -- .toNumber()
 // But to be on the safe side, you can also use it as a string
 console.log(convertedAmount.toString());
 ```
@@ -236,7 +236,7 @@ Note that **you will not be judged too harshly** on your number conversions, but
 
 **Getting the date**
 
-Events themselves won't provide you with a date, but there's a way of fetching it using a method called `getBlockTime`, which can be imported from `@colony/colony-js`:
+Events themselves won't provide you with a date, but there's a way of fetching it by using a method called `getBlockTime`, which can be imported from `@colony/colony-js`:
 
 ```js
 import { getLogs } from '@colony/colony-js';
@@ -258,7 +258,7 @@ The list you will end up with, after you parse it and concatenate it, should:
 The final object/data format that feeds into the list Component is up to you.
 
 
-## Submitting results
+## Submitting the results
 
 Here's how you should submit your work:
 - It needs to be shared as a public git repository _(Create it with your favorite provider: Github, Gitlab, BitBucket, etc)_
