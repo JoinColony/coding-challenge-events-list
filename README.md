@@ -20,10 +20,12 @@ The design specs provided are orientative, as we won't count the exact pixels, b
 
 **Page**
 - Background: grandient from `#f4f0f3` to `#eaf3f7`
+- List should be centered horizontally
 
 **Events List**
 - Width: `700`px
 - Height: _dynamic_
+- Margins relative to page are up to you _(just take the `centered` requirement into account)_
 - Shadow: `rgba(62, 118, 244, 0.14)` _(use your own appreciation skills to determine the appropriate offsets)_
 - Forms of pagination _(infinite scroll, load more, etc)_ will be appreciated, but are not required
 
