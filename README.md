@@ -113,7 +113,7 @@ If you require docs for `v4` of `ethers`, you can find them here: https://docs.e
 
 **Getting the Colony Client**
 
-The events data that you'll be using comes from the [`Betacolony`](https://colony.io/colony/beta) colony that is deployed to mainent. For this you will require an `colonyClient` instance.
+The events data that you'll be using comes from the [`Betacolony`](https://colony.io/colony/beta) colony that is deployed to mainnet. For this you will require an `colonyClient` instance.
 
 Here is how you can get one:
 
