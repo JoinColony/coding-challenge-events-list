@@ -118,7 +118,7 @@ The events data that you'll be using comes from the [`Betacolony`](https://colon
 Here is how you can get one:
 
 ```js
-import { getColonyNetworkClient, Network, getLogs, getBlockTime } from '@colony/colony-js';
+import { getColonyNetworkClient, Network } from '@colony/colony-js';
 import { Wallet } from 'ethers';
 import { InfuraProvider } from 'ethers/providers';
 
@@ -155,6 +155,8 @@ Now that you have the `colonyClient` instance, you can use it to filter out the 
 Note that this example only covers this for one event type, as the process is the same for  of them.
 
 ```js
+import { getLogs } from '@colony/colony-js';
+
 // Get the filter
 // There's a corresponding filter method for all event types
 const eventFilter = colonyClient.filters.PayoutClaimed();
@@ -172,7 +174,7 @@ const parsedLogs = eventLogs.map(event => colonyClient.interface.parseLog(event)
 
 **Handling User Addresses**
 
-User addresses should be used as-is, not parsing or mapping necessary
+User addresses should be used as-is, no parsing or mapping necessary
 
 **Handling User Roles**
 
@@ -235,7 +237,7 @@ Note that **you will not be judged too harshly** on your number conversions, but
 Events themselves won't provide you with a date, but there's a way of fetching it using a method called `getBlockTime`, which can be imported from `@colony/colony-js`:
 
 ```js
-import { getColonyNetworkClient, Network, getLogs, getBlockTime } from '@colony/colony-js';
+import { getLogs } from '@colony/colony-js';
 
 const [singleLog] = parsedLogs;
 
@@ -251,7 +253,7 @@ The list you will end up with, after you parse it and concatenate it, should:
 - be sorted reverse chronological _(newest at the top)_
 - contain all the values required in the copy
 
-The final object/data format you end up with is up to you.
+The final object/data format that feeds into the list Component is up to you.
 
 
 ## Submitting results
