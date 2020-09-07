@@ -256,3 +256,7 @@ The final object/data format you end up with is up to you.
 
 ## Submitting results
 
+Here's how you should submit your work:
+- It needs to be shared as a public git repository _(Create it with your favorite provider: Github, Gitlab, BitBucket, etc)_
+- Send the repo link to [raul@colony.io](mailto://raul@colony.io)
+- Only submit it once you completed your work
