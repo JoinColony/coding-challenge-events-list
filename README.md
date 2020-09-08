@@ -239,7 +239,7 @@ Note that **you will not be judged too harshly** on your number conversions, but
 Events themselves won't provide you with a date, but there's a way of fetching it by using a method called `getBlockTime`, which can be imported from `@colony/colony-js`:
 
 ```js
-import { getLogs } from '@colony/colony-js';
+import { getBlockTime } from '@colony/colony-js';
 
 const [singleLog] = parsedLogs;
 
