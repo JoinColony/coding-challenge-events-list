@@ -63,6 +63,8 @@ From all the events available to us, you'll just be displaying the following fou
 - [PayoutClaimed](https://github.com/JoinColony/colonyNetwork/blob/develop/contracts/colony/ColonyDataTypes.sol#L39-L44)
 - [DomainAdded](https://github.com/JoinColony/colonyNetwork/blob/develop/contracts/colony/ColonyDataTypes.sol#L180-L182)
 
+**Note:** that the copy below should be highlighted as specified _(Only dynamic values should have a heavy font `weight`, while the rest of the copy should be `regular`)_
+
 **ColonyInitialised**
 
 _Event logged when Colony is initialised_
