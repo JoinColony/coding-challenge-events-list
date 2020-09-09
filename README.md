@@ -256,6 +256,8 @@ Avatars should be generated from the user's address using one of the available b
 
 We suggest using [`ethereum-blockies`](https://github.com/ethereum/blockies) but any will do as long as it generates a random avatar from the address entropy.
 
+In case there's no user address in the event payload values, try using something else for entropy _(Eg: a colony's address, a transaction's hash, etc)_.
+
 ### Formatting the data
 
 The list you will end up with, after you parse it and concatenate it, should:
