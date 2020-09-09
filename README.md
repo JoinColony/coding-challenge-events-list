@@ -248,6 +248,12 @@ const logTime = await getBlockTime(provider, singleLog.blockHash);
 
 ```
 
+**Handling Avatars**
+
+Avatars should be generated from the user's address using one of the available blockie libraries.
+
+We suggest using `ethereum-blockies` but any will do as long as it generates a random avatar from the address entropy.
+
 ### Formatting the data
 
 The list you will end up with, after you parse it and concatenate it, should:
