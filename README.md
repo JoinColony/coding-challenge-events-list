@@ -6,6 +6,17 @@ Your task for this challenge is to build a simple events list display. It looks 
 
 The page you'll be creating just displays the list of formatted event data in a _(mostly)_ non-interactive way, sorted in a certain way.
 
+**What WE'RE looking for with this challenge:**
+- Grasp of scripting languages and frameworks
+- Quality, structure and readability of code
+- Attention to details
+- Being able to use a stack / data structure you _(probably)_  are not familiar with
+
+**What WE'RE NOT looking for with this challenge:**
+- Production ready
+- Speed of delivery
+- To trick or confuse you while doing the challenge _(if something is not clear, feel free to ask in our Discord)_
+
 ## Stack
 
 We expect this task to be completed using [React](https://reactjs.org/), [CSS Modules](https://github.com/css-modules/css-modules) and [Typescript](https://www.typescriptlang.org/)
