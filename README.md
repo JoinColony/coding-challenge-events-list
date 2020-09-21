@@ -7,15 +7,23 @@ Your task for this challenge is to build a simple events list display. It looks 
 The page you'll be creating just displays the list of formatted event data in a _(mostly)_ non-interactive way, sorted in a certain way.
 
 **What WE'RE looking for with this challenge:**
+
 - Grasp of scripting languages and frameworks
 - Quality, structure and readability of code
 - Attention to details
 - Being able to use a stack / data structure you _(probably)_  are not familiar with
 
 **What WE'RE NOT looking for with this challenge:**
+
 - Production ready
 - Speed of delivery
 - To trick or confuse you while doing the challenge _(if something is not clear, feel free to ask in our Discord)_
+
+**How long this should take**
+
+This should all take about `4` hours to complete, as mostly just the UI needs to be built from scratch, data fetching is all provided in sections below.
+
+But as stated above, we are not looking for a speedy delivery, and you will not be judged on _when_ you deliver it, so the `4` hour mark above is just there to provide you with an estimate on what you have to look forward to.
 
 ## Stack
 
