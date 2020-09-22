@@ -197,7 +197,7 @@ const parsedLogs = eventLogs.map(event => colonyClient.interface.parseLog(event)
 
 #### Handling User Addresses
 
-User addresses should be used as-is, no parsing or mapping necessary
+User addresses should be used as-is, no parsing or mapping necessary, just make sure you get the "correct" value for the user address from the logs. _(there are many values that look like a user address hash, especially when merging the raw and parsed logs together)_
 
 #### Handling User Roles
 
