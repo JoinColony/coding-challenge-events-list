@@ -18,18 +18,18 @@ The additional external libraries you'll need to complete this will be detailed 
 
 The design specs provided are orientative, as we won't count the exact pixels, but try to make it resemble the designs as much as possible _(going by both the below specs and the provided screenshot)_.
 
-**Page**
+#### Page
 - Background: gradient from `#f4f0f3` to `#eaf3f7`
 - List should be centered horizontally
 
-**Events List**
+#### Events List
 - Width: `700`px
 - Height: _dynamic_
 - Margins relative to page are up to you _(just take the `centered` requirement into account)_
 - Shadow: `rgba(62, 118, 244, 0.14)` _(use your own appreciation skills to determine the appropriate offsets)_
 - Forms of pagination _(infinite scroll, load more, etc)_ will be appreciated, but are not required
 
-**List Item**
+#### List Item
 - Height: `90`px
 - Padding top, bottom: `26`px
 - Padding left, right: `20`px
@@ -37,11 +37,11 @@ The design specs provided are orientative, as we won't count the exact pixels, b
 - Border-radius: `6`px
 - Background Hover State: _should be existent, but it's up to you what color / effect you choose to apply to it_
 
-**Avatar**
+#### Avatar
 - Width, Height: `37`px
 - Border Radius: _enought to create a circle_
 
-**Copy**
+#### Copy
 - Font family: [Muli](https://www.fontsquirrel.com/fonts/muli) or [Mulish](https://fonts.google.com/specimen/Mulish)
 - Font weight regular: `400`
 - Font weight heavy: `700`
@@ -65,7 +65,7 @@ From all the events available to us, you'll just be displaying the following fou
 
 **Note:** that the copy below should be highlighted as specified _(Only dynamic values should have a heavy font `weight`, while the rest of the copy should be `regular`)_
 
-**ColonyInitialised**
+#### ColonyInitialised
 
 _Event logged when Colony is initialised_
 
@@ -75,7 +75,7 @@ Required display data and copy:
 
 Expected event values: [ColonyDataTypes.sol#L25-L26](https://github.com/JoinColony/colonyNetwork/blob/develop/contracts/colony/ColonyDataTypes.sol#L25-L26)
 
-**ColonyRoleSet**
+#### ColonyRoleSet
 
 _Event logged when a user/domain/role is granted or revoked_
 
@@ -85,7 +85,7 @@ Required display data and copy:
 
 Expected event values: [ColonyDataTypes.sol#L40-L43](https://github.com/JoinColony/colonyNetwork/blob/develop/contracts/colony/ColonyDataTypes.sol#L40-L43)
 
-**PayoutClaimed**
+#### PayoutClaimed
 
 _Event logged when reward payout is claimed_
 
@@ -95,7 +95,7 @@ Required display data and copy:
 
 Expected event values: [ColonyDataTypes.sol#L68-L71](https://github.com/JoinColony/colonyNetwork/blob/develop/contracts/colony/ColonyDataTypes.sol#L68-L71)
 
-**DomainAdded**
+#### DomainAdded
 
 _Event logged when a new Domain is added_
 
@@ -115,7 +115,7 @@ Install the latest **version 4** of [`ethers.js`](https://github.com/ethers-io/e
 
 If you require docs for `v4` of `ethers`, you can find them here: https://docs.ethers.io/v4/
 
-**Getting the Colony Client**
+#### Getting the Colony Client
 
 The events data that you'll be using comes from the [`Betacolony`](https://colony.io/colony/beta) colony that is deployed to mainnet. For this you will require an `colonyClient` instance.
 
@@ -152,7 +152,7 @@ const networkClient = await getColonyNetworkClient(
 const colonyClient = await networkClient.getColonyClient(MAINNET_BETACOLONY_ADDRESS);
 ```
 
-**Getting the Event Data**
+#### Getting the Event Data
 
 Now that you have the `colonyClient` instance, you can use it to filter out the logs of just the events that you need.
 
@@ -176,11 +176,11 @@ Something like this:
 const parsedLogs = eventLogs.map(event => colonyClient.interface.parseLog(event));
 ```
 
-**Handling User Addresses**
+#### Handling User Addresses
 
 User addresses should be used as-is, no parsing or mapping necessary
 
-**Handling User Roles**
+#### Handling User Roles
 
 User roles will be returned as `integer` values. the [`colonyJS`](https://github.com/JoinColony/colonyJS) library includes a mapping that you can use for this:
 
@@ -191,13 +191,13 @@ import { ColonyRole } from '@colony/colony-js';
 console.log(ColonyRole);
 ```
 
-**Handling Token Symbols**
+#### Handling Token Symbols
 
 One of the events you will have to handle includes displaying payouts in various tokens. The parsed event data will only give you a token's address.
 
 It is up to you to look up tokens on [Etherscan](https://etherscan.io/tokens) _(or another block explorer)_ and create a manual, local mapping between token addresses and token symbols.
 
-**Handling Numbers**
+#### Handling Numbers
 
 The biggest challenge here is to handle and parse numbers, since all number values are returned as `hexadecimal string` value of an [`BigNumber`](https://github.com/indutny/bn.js/) instance.
 
@@ -236,7 +236,7 @@ console.log(convertedAmount.toString());
 
 Note that **you will not be judged too harshly** on your number conversions, but accurate values will be appreciated.
 
-**Getting the date**
+#### Getting the date
 
 Events themselves won't provide you with a date, but there's a way of fetching it by using a method called `getBlockTime`, which can be imported from `@colony/colony-js`:
 
@@ -250,7 +250,7 @@ const logTime = await getBlockTime(provider, singleLog.blockHash);
 
 ```
 
-**Handling Avatars**
+#### Handling Avatars
 
 Avatars should be generated from the user's address using one of the available blockie libraries.
 
