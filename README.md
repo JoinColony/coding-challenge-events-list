@@ -195,6 +195,8 @@ Something like this:
 const parsedLogs = eventLogs.map(event => colonyClient.interface.parseLog(event));
 ```
 
+Make sure you merge both raw and parsed events together, or at least pick and choose the values you need. There are values in both objects you will require to properly display the string templates for the various event types.
+
 #### Handling User Addresses
 
 User addresses should be used as-is, no parsing or mapping necessary, just make sure you get the "correct" value for the user address from the logs. _(there are many values that look like a user address hash, especially when merging the raw and parsed logs together)_
