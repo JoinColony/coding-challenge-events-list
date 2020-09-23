@@ -109,7 +109,7 @@ Expected event values: [ColonyDataTypes.sol#L40-L43](https://github.com/JoinColo
 _Event logged when reward payout is claimed_
 
 Required display data and copy:
-- Primary:  User **${userAddress}** claimed **${amount}${token}** payout from pot **${rewardPayoutId}**.
+- Primary:  User **${userAddress}** claimed **${amount}${token}** payout from pot **${fundingPotId}**.
 - Secondary: _Formatted event date_
 
 Expected event values: [ColonyDataTypes.sol#L68-L71](https://github.com/JoinColony/colonyNetwork/blob/develop/contracts/colony/ColonyDataTypes.sol#L68-L71)
