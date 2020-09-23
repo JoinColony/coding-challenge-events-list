@@ -197,6 +197,29 @@ const parsedLogs = eventLogs.map(event => colonyClient.interface.parseLog(event)
 
 Make sure you merge both raw and parsed events together, or at least pick and choose the values you need. There are values in both objects you will require to properly display the string templates for the various event types.
 
+##### Special note on the `PayoutClaimed` event
+
+This event will not give you the user's address in either the raw event object or the parsed one. To fetch it, you'll need to get the payment details from the funding pot.
+
+Here's how to do it:
+
+```js
+// See section "Handling Numbers" for how BigNumber plays a role
+import { utils } from 'ethers';
+
+const [singleLog] = parsedLogs;
+
+const humanReadableFundingPotId = new utils.BigNumber(
+  singleLog.values.fundingPotId
+).toString();
+
+const {
+  associatedTypeId,
+} = await colonyClient.getFundingPot(humanReadableFundingPotId);
+
+const { recipient: userAddress } = await colonyClient.getPayment(associatedTypeId);
+```
+
 #### Handling User Addresses
 
 User addresses should be used as-is, no parsing or mapping necessary, just make sure you get the "correct" value for the user address from the logs. _(there are many values that look like a user address hash, especially when merging the raw and parsed logs together)_
