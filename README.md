@@ -2,7 +2,7 @@
 
 Your task for this challenge is to build a simple events list display. It looks something like this:
 
-![Events List](./events-list-screenshot.png)
+![Events List](./events-list-screenshot-updated.png)
 
 The page you'll be creating just displays the list of formatted event data in a _(mostly)_ non-interactive way, sorted in a certain way.
 
