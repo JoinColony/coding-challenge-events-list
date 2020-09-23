@@ -304,7 +304,7 @@ In case there's no user address in the event payload values, try using something
 
 #### Exploring a transaction
 
-As a back up plan, or, if you just want to have a _more_ visual representation of the values you are working with, you can always use a [blockchian explorer](https://etherscan.io/) to inspect the transaction.
+As a back up plan, or, if you just want to have a _more_ visual representation of the values you are working with, you can always use a [blockchain explorer](https://etherscan.io/) to inspect the transaction.
 
 Just get the `transactionHash` value from your event log _(you'll find it in the raw event, not the parsed one)_, then navigate directly to it by contructing a link similar to this one: `https://etherscan.io/tx/<transactionHash>`.
 
