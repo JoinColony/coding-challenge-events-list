@@ -9,6 +9,8 @@ The page you'll be creating just displays the list of formatted event data in a 
 **What WE'RE looking for with this challenge:**
 
 - Grasp of scripting languages and frameworks
+- Types and the way you type components and values
+- **Following the design spec correctly**
 - Quality, structure and readability of code
 - Attention to details
 - Being able to use a stack / data structure you _(probably)_  are not familiar with
@@ -66,7 +68,7 @@ The design specs provided are orientative, as we won't count the exact pixels, b
 - Font weight heavy: `700`
 - Font size primary: `14`px
 - Font size secondary: `12`px
-- Forms of variable length handling will be appreciated _(eg: ellipsis)_
+- Make sure overflow text is cut off using ellipsis, but visible on hover
 
 ## Data
 
@@ -296,9 +298,7 @@ const logTime = await getBlockTime(provider, singleLog.blockHash);
 
 #### Handling Avatars
 
-Avatars should be generated from the user's address using one of the available blockie libraries.
-
-We suggest using [`ethereum-blockies`](https://github.com/ethereum/blockies) but any will do as long as it generates a random avatar from the address entropy.
+Avatars should be generated from the user's address using the [`ethereum-blockies`](https://github.com/ethereum/blockies) library.
 
 In case there's no user address in the event payload values, try using something else for entropy _(Eg: a colony's address, a transaction's hash, etc)_.
 
