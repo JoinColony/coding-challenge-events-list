@@ -166,7 +166,9 @@ const connectedWallet = wallet.connect(provider);
 const networkClient = await getColonyNetworkClient(
   Network.Mainnet,
   connectedWallet,
-  MAINNET_NETWORK_ADDRESS,
+  {
+    networkAddress: MAINNET_NETWORK_ADDRESS
+  },
 );
 
 // Get the colony client instance for the betacolony
