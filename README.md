@@ -62,13 +62,14 @@ The design specs provided are orientative, as we won't count the exact pixels, b
 - Width, Height: `37`px
 - Border Radius: _enought to create a circle_
 
-#### Copy
+#### Copy/Text
 - Font family: [Muli](https://www.fontsquirrel.com/fonts/muli) or [Mulish](https://fonts.google.com/specimen/Mulish)
 - Font weight regular: `400`
 - Font weight heavy: `700`
 - Font size primary: `14`px
 - Font size secondary: `12`px
 - Make sure overflow text is cut off using ellipsis, but visible on hover
+- The format for the date is: `DD Mmm`, where `Mmm` is a 3 letter abbreviation of the month
 
 ## Data
 
