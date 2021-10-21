@@ -55,7 +55,7 @@ The design specs provided are orientative, as we won't count the exact pixels, b
 - Padding top, bottom: `26`px
 - Padding left, right: `20`px
 - Background: `white`
-- Border-radius: `6`px
+- Border-radius: `6`px _(Note that only the first and last elements in the list have this, and only on the outmost corners -- top left/right for the first one, bottom left/right for the last one)_
 - Background Hover State: _should be existent, but it's up to you what color / effect you choose to apply to it_
 
 #### Avatar
