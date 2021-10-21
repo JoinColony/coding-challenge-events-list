@@ -301,9 +301,11 @@ const logTime = await getBlockTime(provider, singleLog.blockHash);
 
 #### Handling Avatars
 
-Avatars should be generated from the user's address using the [`ethereum-blockies`](https://github.com/ethereum/blockies) library.
+Avatars should be generated from the user's address using the [`ethereum-blockies`](https://github.com/ethereum/blockies) library. _(You can also use [`react-blockies`](https://www.npmjs.com/package/react-blockies) since that is just a React wrapper over `ethereum-blockies` anyway)_
 
-In case there's no user address in the event payload values, try using something else for entropy _(Eg: a colony's address, a transaction's hash, etc)_.
+Note that depending on the event type, the user's address might not be available directly and you'll have to do more data fetching to get it _(Eg: `PayoutClaimed`)_
+
+In cases where you don't find a user address at all, fall back to the colony's address.
 
 #### Exploring a transaction
 
