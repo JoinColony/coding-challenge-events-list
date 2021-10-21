@@ -68,7 +68,7 @@ The design specs provided are orientative, as we won't count the exact pixels, b
 - Font weight heavy: `700`
 - Font size primary: `14`px
 - Font size secondary: `12`px
-- Make sure overflow text is cut off using ellipsis, but visible on hover
+- Make sure overflow text is cut off using ellipsis, but visible on hover _(When hovering, the line of text that was previously hidden by an ellipsis should not be shown, and it should wrap over the next line -- list item height can grow on hover if needed)_
 - The format for the date is: `DD Mmm`, where `Mmm` is a 3 letter abbreviation of the month
 
 ## Data
