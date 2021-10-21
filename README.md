@@ -291,7 +291,7 @@ Events themselves won't provide you with a date, but there's a way of fetching i
 ```js
 import { getBlockTime } from '@colony/colony-js';
 
-const [singleLog] = parsedLogs;
+const [singleLog] = eventLogs;
 
 // Use the blockHash to look up the actual time of the block that mined the transactions of the current event
 const logTime = await getBlockTime(provider, singleLog.blockHash);
