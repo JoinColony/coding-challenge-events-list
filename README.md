@@ -4,6 +4,8 @@ Your task for this challenge is to build a simple events list display. It looks 
 
 ![Events List](./events-list-screenshot-updated.png)
 
+**NOTE:** The image is provieded as a rough guideline and is not intended for you to follow as a visual spec. **Please follow the specs listed below**, and not just copy what image looks like.
+
 The page you'll be creating just displays the list of formatted event data in a _(mostly)_ non-interactive way, sorted in a certain way.
 
 **What WE'RE looking for with this challenge:**
