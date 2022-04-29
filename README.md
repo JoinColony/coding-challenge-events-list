@@ -1,10 +1,10 @@
-# Colony Coding Challenge
+# Colony Events List Coding Challenge
 
 Your task for this challenge is to build a simple events list display. It looks something like this:
 
 ![Events List](./events-list-screenshot-updated.png)
 
-**NOTE:** The image is provieded as a rough guideline and is not intended for you to follow as a visual spec. **Please follow the specs listed below**, and not just copy what image looks like.
+**NOTE:** The image is provided as a rough guideline and is not intended for you to follow as a visual spec. **Please follow the specs listed below**, and not just copy what image looks like.
 
 The page you'll be creating just displays the list of formatted event data in a _(mostly)_ non-interactive way, sorted in a certain way.
 
@@ -33,7 +33,11 @@ But as stated above, we are not looking for a speedy delivery, and you will not 
 
 We expect this task to be completed using [React](https://reactjs.org/), [CSS Modules](https://github.com/css-modules/css-modules) and [Typescript](https://www.typescriptlang.org/)
 
-For this, we suggest using [`create-react-app`](https://reactjs.org/docs/create-a-new-react-app.html), but we won't hold it against you if you prefer to set up the environment yourself, as long as it meets the above criteria.
+For this, we suggest using a bootstraping repo we've set up, [coding-challenge-events-list-bootstrap](https://github.com/JoinColony/coding-challenge-events-list-bootstrap) _(based on [`create-react-app`](https://reactjs.org/docs/create-a-new-react-app.html))_ which will have everything mentioned above set up, and the two main libs installs: `colonyJS` and `ethers`.
+
+**NOTE:** _The above was set up after `webpack` was updated to version `5` by CRA, and since it dropped automatic node polyfills, it broke a lot of dependencies `colonyJS` and `ethers` are relying on. The above repo uses `webpack` version `4` to ensure everything works as expected._
+
+However, if you don't want to use the above repo, or want to use `create-react-app` yourself, or maybe even set up everything manually, we obviously won't hold it againts you, as long as it meets the above criteria.
 
 The additional external libraries you'll need to complete this will be detailed in the appropriate section(s).
 
