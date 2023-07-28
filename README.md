@@ -1,3 +1,11 @@
+---
+
+### Archived
+
+This repository has been archived and will no longer be used
+
+---
+
 # Colony Events List Coding Challenge
 
 Your task for this challenge is to build a simple events list display. It looks something like this:
